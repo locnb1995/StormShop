@@ -25,7 +25,7 @@ services:
     volumes:
       - storm-shop-mssql-data:/var/opt/mssql/data
       - storm-shop-mssql-log:/var/opt/mssql/log
-      - storm-shop-mssql-log:/var/opt/mssql/secrets
+      - storm-shop-mssql-secrets:/var/opt/mssql/secrets
 volumes:
   storm-shop-mssql-data:
   storm-shop-mssql-log:
