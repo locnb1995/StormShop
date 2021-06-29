@@ -1,5 +1,5 @@
 # StormShop
-build with spring cloud and docker
+Project have built with Spring Cloud , Sql Server and Docker.
 
 Set up Project
 
