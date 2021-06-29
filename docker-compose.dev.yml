@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  storm-shop-eureka-server:
+    image: storm-shop-eureka-server
+    ports:
+      - 8761:8761
+  storm-shop-gateway:
+    image: storm-shop-gateway
+    ports:
+      - 8762:8762
+  storm-shop-authentication:
+    image: storm-shop-authentication
+    ports:
+      - 8763:8763
+  storm-shop-authorization:
+    image: storm-shop-authorization
+    ports:
+      - 8764:8764
+  storm-shop-db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    user: root
+    environment:
+      SA_PASSWORD: "Nguyenbaoloc1995"
+      ACCEPT_EULA: "Y"
+    volumes:
+      - storm-shop-mssql-data:/var/opt/mssql/data
+      - storm-shop-mssql-log:/var/opt/mssql/log
+      - storm-shop-mssql-log:/var/opt/mssql/secrets
+volumes:
+  storm-shop-mssql-data:
+  storm-shop-mssql-log:
+  storm-shop-mssql-secrets:

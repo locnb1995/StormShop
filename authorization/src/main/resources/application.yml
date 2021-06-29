@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: storm-shop-authorization
+  datasource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://storm-shop-db;databaseName=resources
+    username: SA
+    password: Nguyenbaoloc1995
+server:
+  port: 8764
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://storm-shop-eureka-server:8761/eureka}
+  instance:
+    preferIpAddress: true
