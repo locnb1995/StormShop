@@ -13,10 +13,11 @@ Notes : **Only need to do it once when the container db of application does not 
 1. Go to **StormShop** folder
 2. Run [sudo docker rm volume storm-shop-mssql-data volume storm-shop-mssql-log volume storm-shop-mssql-secrets] (remove sudo if use window)
 3. Run [sudo docker-compose -f docker-compose.db.yml up --build] (remove sudo if use window)
-4. Use tool as DBEaver , Sql Server Management , ... connect to DB and create 1 DB with name : resources
-   DB host : http://localhost:1433
-   DB Username : SA
-   DB Password : Nguyenbaoloc1995
+4. Use tool as DBEaver , Sql Server Management , ... connect to DB and create 1 DB with name : "resources". See DB Info in next step.
+5. DB Info
+   - Host : http://localhost:1433
+   - Username : SA
+   - Password : Nguyenbaoloc1995
 5. After that, you can stop and remove exist db container in this step and re-init in next step.
 
 
