@@ -4,9 +4,11 @@ build with spring cloud and docker
 Set up Project
 
 --------------------- Pull Sql Server 2019 from docker
+
 1. Run [sudo docker pull mcr.microsoft.com/mssql/server:2019-latest] (remove sudo if use window)
 
 --------------------- Init DB
+
 Notes : **Only need to do it once when the container db of application does not exists. If container db of application already existed , skip this step.**
 1. Go to **StormShop** folder
 2. Run [sudo docker rm volume storm-shop-mssql-data volume storm-shop-mssql-log volume storm-shop-mssql-secrets] (remove sudo if use window)
