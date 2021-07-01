@@ -17,7 +17,7 @@ services:
     ports:
       - 8764:8764
   storm-shop-db:
-    image: mcr.microsoft.com/mssql/server:2019-latest
+    image: storm-shop-db-image
     user: root
     environment:
       SA_PASSWORD: "Nguyenbaoloc1995"

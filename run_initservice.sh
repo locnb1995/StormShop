@@ -1,14 +1,16 @@
 #!/bin/sh
+PASSWORD="Loc19081995"
+echo "${PASSWORD}" | sudo -S docker exec -i storm-shop-db-init /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P Nguyenbaoloc1995 -i initdb.sql
 cd eurekaserver/
-echo Loc19081995 | sudo -S docker build --tag storm-shop-eureka-server .
+echo "${PASSWORD}" | sudo -S docker build --tag storm-shop-eureka-server .
 cd ..
 cd gateway/
-echo Loc19081995 | sudo -S docker build --tag storm-shop-gateway .
+echo "${PASSWORD}" | sudo -S docker build --tag storm-shop-gateway .
 cd ..
 cd authentication/
-echo Loc19081995 | sudo -S docker build --tag storm-shop-authentication .
+echo "${PASSWORD}" | sudo -S docker build --tag storm-shop-authentication .
 cd ..
 cd authorization/
-echo Loc19081995 | sudo -S docker build --tag storm-shop-authorization .
+echo "${PASSWORD}" | sudo -S docker build --tag storm-shop-authorization .
 cd ..
-echo Loc19081995 | sudo -S docker-compose -f docker-compose.dev.yml up --build
+echo "${PASSWORD}" | sudo -S docker-compose -f docker-compose.dev.yml up --build
